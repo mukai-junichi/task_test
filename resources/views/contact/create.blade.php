@@ -15,7 +15,8 @@
                     @endif
 
                     createです
-                    <form method="POST" action="">
+                    <form method="POST" action="{{route('contact.store')}}">
+                    @csrf
                         氏名
                         <input type="text" name="your_name">
                         <br>
@@ -35,7 +36,7 @@
                         年齢
                         <select name="age">
                             <option value="">選択してください</option>
-                            <option value="1">2〜19歳</option>
+                            <option value="1">〜19歳</option>
                             <option value="2">20歳〜29歳</option>
                             <option value="3">30歳〜39歳</option>
                             <option value="4">40歳〜49歳</option>
