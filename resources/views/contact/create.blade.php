@@ -30,8 +30,8 @@
                         <input type="url" name="url">
                         <br>
                         性別
-                        <input type="radio" name="gender" value="0">男性</input>
-                        <input type="radio" name="gender" value="1">女性</input>
+                        <input type="radio" name="gender" value="0">男性
+                        <input type="radio" name="gender" value="1">女性
                         <br>
                         年齢
                         <select name="age">
@@ -48,7 +48,7 @@
                         <textarea name="contact"></textarea>
                         <br>
 
-                        <input type="checkbox" name="caution" value="1">注意事項に同意する</input>
+                        <input type="checkbox" name="caution" value="1">注意事項に同意する
                         <br>
 
                         <input type="submit" class="btn btn-info" value="登録する">
