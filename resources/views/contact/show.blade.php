@@ -28,9 +28,25 @@
                         <input type="submit" class="btn btn-info" value="変更する">
                         <br>
                     </form>
+
+                    <form method="POST" action="{{ route('contact.destroy', ['id' => $contact->id]) }}" id="delete_{{ $contact->id }}">
+                    @csrf
+                        <a href="#" class="btn btn-danger" data-id="{{ $contact->id }}" onclick="deletePost(this);">削除する</a>
+                        <br>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+// 削除ボタンを押してすぐにレコードが削除されるのは良くないため、一旦javascriptで確認メッセージを流す。
+function deletePost(e) {
+    'use strict';
+    if (confirm('本当に削除していいですか？')) {
+        document.querySelector('#delete_' + e.dataset.id).submit();
+    }
+}
+</script>
 @endsection
